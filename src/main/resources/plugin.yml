@@ -1,0 +1,5 @@
+name: HubControl
+main: com.relicum.hubcontrol.HubControl
+author: Relicum
+version: 1.0-SNAPSHOT
+description: Everything need to control and manage your server hub

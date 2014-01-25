@@ -1,0 +1,4 @@
+listeners:
+  noHunger: true
+  noDamage: true
+  noLeafDecay: true
