@@ -6,7 +6,7 @@
 
     <groupId>com.relicum</groupId>
     <artifactId>HubControl</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>HubControl</name>
     <properties>
@@ -47,6 +47,23 @@
 
         <plugins>
             <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+                <promoteTransitiveDependencies>false</promoteTransitiveDependencies>
+                <minimizeJar>true</minimizeJar>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -66,12 +83,32 @@
             <version>1.7.2-R0.3-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.relicum</groupId>
+            <artifactId>SimpleSubs</artifactId>
+            <version>0.0.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
+        </dependency>
     </dependencies>
 
     <repositories>
         <repository>
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>cloudbees-private-release-repository</id>
+            <url>https://repository-relicum.forge.cloudbees.com/release/</url>
         </repository>
     </repositories>
 

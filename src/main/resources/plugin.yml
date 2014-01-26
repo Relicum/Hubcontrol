@@ -3,3 +3,17 @@ main: com.relicum.hubcontrol.HubControl
 author: Relicum
 version: 1.0-SNAPSHOT
 description: Everything need to control and manage your server hub
+depend: [SimpleSubs,CleanroomGenerator]
+
+commands:
+  hubctl:
+    description: Main Sub Command for HubControl
+    aliases: hc
+    permission: hubcontrol.admin
+    usage: /hubctl <command> [args]
+
+permissions:
+    hubcontrol.admin.*:
+        description: Gives player access to all admin commands
+        children:
+            hubcontrol.admin: true
