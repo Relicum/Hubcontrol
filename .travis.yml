@@ -4,3 +4,4 @@ jdk:
 script: "mvn clean install --settings settings.xml"
 notifications:
   email: false
+
