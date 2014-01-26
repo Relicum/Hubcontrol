@@ -11,6 +11,9 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
+/**
+ * Stop any player damage from occurring
+ */
 public class Damage implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
