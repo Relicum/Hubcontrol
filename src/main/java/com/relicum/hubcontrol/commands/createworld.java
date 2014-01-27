@@ -49,6 +49,7 @@ public class createworld extends MultiSub {
             world.save();
             world.setAutoSave(true);
         }
+        System.out.println("Successfully created a new world");
         return true;
     }
 

@@ -5,7 +5,5 @@
  */
 package com.relicum.hubcontrol.utils;
 
-import java.io.Serializable;
-
-public class SerializedLocation implements Serializable {
+public class SerializedLocation {
 }
