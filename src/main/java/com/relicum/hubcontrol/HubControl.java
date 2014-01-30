@@ -76,7 +76,7 @@ public class HubControl extends JavaPlugin {
             return;
         }
 
-        //set list delimiter
+        //set list delimite
         config.setListDelimiter('/');
 
 
