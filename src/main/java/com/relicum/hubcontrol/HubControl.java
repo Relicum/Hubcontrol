@@ -48,9 +48,12 @@ public class HubControl extends JavaPlugin {
             saveResource("config.properties", false);
             file = new File(getDataFolder().toString() + "/config.properties");
             if (!file.exists()) {
-                System.out.println("New have a file load problem");
+                System.out.println("We have a file load problem");
+                file = null;
             }
         }
+
+
 
         // Register Sub commands using Simple Subs
         Simplesubs ss = (Simplesubs) getServer().getPluginManager().getPlugin("SimpleSubs");
@@ -73,6 +76,7 @@ public class HubControl extends JavaPlugin {
             return;
         }
 
+        //set list delimiter
         config.setListDelimiter('/');
 
 
