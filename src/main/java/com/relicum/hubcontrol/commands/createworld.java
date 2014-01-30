@@ -27,14 +27,14 @@ public class createworld extends MultiSub {
 
     @Override
     public boolean onCommand(Player player, String[] strings) throws IOException, ClassNotFoundException {
-        if(strings.length == 1){
+        if (strings.length == 1) {
             WorldCreator wc = new WorldCreator(strings[1]);
             wc.generator("CleanroomGenerator:.");
             wc.generateStructures(false);
             wc.environment(World.Environment.NORMAL);
             wc.type(WorldType.FLAT);
             World world = wc.createWorld();
-            world.setSpawnLocation(0,32,0);
+            world.setSpawnLocation(0, 32, 0);
             world.setKeepSpawnInMemory(true);
             BlockState bs = world.getBlockAt(0, 31, 0).getState();
             bs.setType(Material.GOLD_BLOCK);
@@ -42,10 +42,10 @@ public class createworld extends MultiSub {
             world.setPVP(false);
             world.setDifficulty(Difficulty.PEACEFUL);
             world.setGameRuleValue(GAMERULE.doMobSpawning.name(), "false");
-            world.setGameRuleValue(GAMERULE.doFireTick.name(),"false");
+            world.setGameRuleValue(GAMERULE.doFireTick.name(), "false");
             world.setTime(5000l);
 
-            world.setGameRuleValue(GAMERULE.doDaylightCycle.name(),"false");
+            world.setGameRuleValue(GAMERULE.doDaylightCycle.name(), "false");
             world.save();
             world.setAutoSave(true);
         }

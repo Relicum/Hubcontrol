@@ -1,7 +1,7 @@
 name: HubControl
 main: com.relicum.hubcontrol.HubControl
 author: Relicum
-version: 0.1-SNAPSHOT
+version: 0.0.2
 description: Everything need to control and manage your server hub
 depend: [SimpleSubs,CleanroomGenerator]
 

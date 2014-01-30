@@ -12,17 +12,17 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
 /**
- * Stop any player damage from occurring
+ * Stop any player damage from occurring unless it is void damage
  */
 public class Damage implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
-    public void onDamage(EntityDamageEvent e){
-        if(e.getCause() == EntityDamageEvent.DamageCause.VOID)
+    public void onDamage(EntityDamageEvent e) {
+        if (e.getCause() == EntityDamageEvent.DamageCause.VOID)
             return;
-        if(e.getEntity() instanceof Player){
+        if (e.getEntity() instanceof Player) {
             e.setCancelled(true);
-            Player player = (Player)e.getEntity();
+            Player player = (Player) e.getEntity();
             player.setHealth(player.getMaxHealth());
 
         }

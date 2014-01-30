@@ -13,7 +13,7 @@ import org.bukkit.event.block.LeavesDecayEvent;
 public class LeafDecay implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
-    public void noLeafDecay(LeavesDecayEvent e){
+    public void noLeafDecay(LeavesDecayEvent e) {
         e.setCancelled(true);
     }
 }

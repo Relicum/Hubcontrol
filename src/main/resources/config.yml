@@ -2,3 +2,5 @@ listeners:
   noHunger: true
   noDamage: true
   noLeafDecay: true
+worlds:
+  world: enable

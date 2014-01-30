@@ -6,7 +6,7 @@
 
     <groupId>com.relicum</groupId>
     <artifactId>HubControl</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <name>HubControl</name>
     <properties>
@@ -32,7 +32,7 @@
             </plugins>
         </pluginManagement>
 
-        <finalName>${project.name}-${project.version}</finalName>
+        <finalName>HubControl.Alpha.${project.version}</finalName>
 
         <resources>
             <resource>

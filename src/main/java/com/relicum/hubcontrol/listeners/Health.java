@@ -14,12 +14,12 @@ import org.bukkit.event.entity.FoodLevelChangeEvent;
 public class Health implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
-    public void onFoodLevel(FoodLevelChangeEvent e){
-        if(!(e.getEntity() instanceof Player)){
-           return;
+    public void onFoodLevel(FoodLevelChangeEvent e) {
+        if (!(e.getEntity() instanceof Player)) {
+            return;
         }
         e.setCancelled(true);
-        Player player = (Player)e.getEntity();
+        Player player = (Player) e.getEntity();
         player.setFoodLevel(20);
     }
 }
